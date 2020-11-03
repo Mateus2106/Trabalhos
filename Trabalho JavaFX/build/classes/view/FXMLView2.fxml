@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="painelPrincipal" prefHeight="587.0" prefWidth="264.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentControllerView2">
+    <children>
+      <TextField fx:id="txtTitulo" layoutX="15.0" layoutY="59.0" prefHeight="25.0" prefWidth="234.0" />
+      <TextField fx:id="txtAno" layoutX="15.0" layoutY="155.0" prefHeight="25.0" prefWidth="50.0" />
+      <TextArea fx:id="txtDescricao" layoutX="15.0" layoutY="254.0" prefHeight="200.0" prefWidth="234.0" />
+      <Label layoutX="15.0" layoutY="42.0" text="Título">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="134.0" text="Ano">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="89.0" text="Status">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="233.0" text="Descrição">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="456.0" text="Nota">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSalvar" layoutX="15.0" layoutY="520.0" mnemonicParsing="false" onMouseClicked="#cliqueBotaoSalvar" prefHeight="50.0" prefWidth="112.0" text="Salvar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="137.0" layoutY="520.0" mnemonicParsing="false" onMouseClicked="#cliqueBotaoCancelar" prefHeight="50.0" prefWidth="112.0" text="Cancelar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="cbStatus" layoutX="15.0" layoutY="106.0" prefWidth="150.0" />
+      <TextField fx:id="txtProgresso" layoutX="15.0" layoutY="204.0" prefHeight="25.0" prefWidth="90.0" />
+      <Label layoutX="15.0" layoutY="183.0" text="Progresso">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbNota" layoutX="15.0" layoutY="476.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>

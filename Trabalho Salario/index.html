@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- Escola: Monteiro Lobato -->
+<!-- Curso: Informática -->
+<!-- Disciplina: Criação de Sites -->
+<!-- Aluno: Mateus Chaves Marques -->
+<!-- Professor: Cândido Farias -->
+<!-- Data: 12/11/2018 -->
+
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<title>Javascript</title>
+		<link rel="stylesheet" href="./css/style.css"/>
+		<link rel="shortcut icon" href="./imagens/icon.png" type="image/x-icon" />
+	</head>
+
+	<body>
+
+		<header>
+			<h2 id="titulo">Calculadora</h2>
+		</header>
+		
+		<section id="primeiro">
+
+			<div id="sobre">
+				<h2>Sobre</h2>
+			</div>
+
+			<div id="section">
+
+				<p>Quando um funcionário começa a trabalhar em uma empresa, é informado a ele qual será seu rendimento mensal. Este valor é referente ao salário bruto (ou salário base), isto é, sem descontos. Entretanto, esse não é o valor que realmente vai para o bolso do trabalhador (salário líquido). Por isso, alguns podem estranhar que os valores constantes no extrato bancário sejam diferentes do informado na contratação.)</p>
+			
+				<p>O Salário líquido corresponde ao salário bruto (demonstrado em carteira) menos os descontos oficiais. Os principais descontos são os referentes ao INSS e ao Imposto de Renda. Em relação ao primeiro, eles giram em torno de 8% a 11% do salário bruto; já o segundo, varia entre 7% a 27,5% do salário bruto menos o valor referente ao INSS. A definição dos percentuais de ambos, irá variar conforme as faixas salariais</p>
+
+			</div>
+
+		</section>
+
+		<main>
+
+			<h2 id="form">Cálculo Salário Líquido</h2>
+			<p>Este cálculo demostra como obter um valor de salário líquido a partir do salário bruto e dos principais descontos do salário (INSS e IRRF)</p>
+
+			<div id="form1">
+
+				<form onsubmit="calculo(); return false" id="form2">
+
+					<label id="label2">Informe seu nome</label>
+					<input type="text" onKeypress="return teste(event)" id="nome" required /></br>
+
+					<label id="label">Informe seu salário</label></br>
+					<input type="number" step="0.01" id="salario" required="" /></br>
+					<input type="submit" value="Calcular" id="input" />
+
+				</form>
+
+			</div>
+			
+			<div id="mostrar">
+				
+				<table>
+
+					<tr>
+						<td>Nome</td>
+						<td>Salário Bruto</td>
+						<td>Salário Líquido</td>
+						<td>Desconto do INSS</td>
+						<td>Desconto do IRPF</td>
+					</tr>
+
+					<tr>
+						<td><p id="mostrar1"></p></td>
+						<td><p id="mostrar2"></p></td>
+						<td><p id="mostrar3"></p></td>
+						<td><p id="mostrar4"></p></td>
+						<td><p id="mostrar5"></p></td>
+					</tr>	
+
+				</table>
+						
+			</div>
+
+		</main>
+
+		<section id="segundo">
+			<div id="section2">
+				<h2>INSS</h2>
+				<ul>
+					<li>Salário bruto até R$ 1693.72 : 8%.</li><hr>
+					<li>Salário bruto de R$ 1693.73 a R$ 2822.90 : 9%.</li><hr>
+					<li>Salário bruto de R$ 2822.91 a R$ 1903.98 : 11%.</li><hr>
+					<li>Salário bruto acima de R$ 1903.98 : desconto máximo de R$ 621.04.</li><hr>
+				</ul>
+				<h2>IRPF</h2>
+				<ul>
+					<li>Salário bruto menos INNS até R$ 1903.98 : Não possui IRPF.</li><hr>
+					<li>Salário bruto menos INNS de R$ 1903.99 e R$ 2826.65 : 7.5%.</li><hr>
+					<li>Salário bruto menos INNS de R$ 2826.66 e R$ 3751.05 : 15%.</li><hr>
+					<li>Salário bruto menos INNS de R$ 3751.06 e R$ 4664.68 : 22.5%.</li><hr>
+					<li>Salário bruto menos INNS acima de R$ 4664.69 : 27.5%.</li><hr>
+				</ul>
+			</div>
+		</section>
+		
+		<footer>
+			<h2 id="footer">Copyright © mateuschavesmarques@gmail.com</h2>
+		</footer>
+
+	</body>
+
+	<script>
+
+		function teste(e) //função para limitar os caracteres digitados no campo "Informe seu nome"
+		{
+			var expressao;
+
+			expressao = /[a-zA-ZáãâéêíîóôõúûÁÃÂÉÊÍÎÓÔÕÚÛç]/;
+
+			if(expressao.test(String.fromCharCode(e.keyCode)))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+
+		var calculo = function() //Função para a realização do cálculo e exibição na tela
+		{
+			var salario = document.getElementById("salario").value; //Atribui o salário digitado pelo usuário a variavel "salario"
+			var nome = document.getElementById("nome").value; //Atribui o nome digitado pelo usuário a variavel "nome"
+
+			if(salario >= 0) //Teste para ver se o salário digitado é positivo, ou seja, válido
+			{
+				if(salario <=  1693.72) //Teste para ver em qual situação do INSS o salário que o usuário digitou se encaixa
+				{
+					var inss = (8/100) * salario; //Cálculo do INSS
+				}
+		
+				if(salario >= 1693.73 && salario <= 2822.90) //Teste para ver em qual situação do INSS o salário que o usuário digitou se encaixa
+				{
+					var inss = (9/100) * salario; //Cálculo do INSS
+				}
+
+				if(salario >= 2822.91 && salario <= 5645.80) //Teste para ver em qual situação do INSS o salário que o usuário digitou se encaixa
+				{
+					var inss = (11/100) * salario; //Cálculo do INSS
+				}
+
+				if(salario >= 5645.81) //Teste para ver em qual situação do INSS o salário que o usuário digitou se encaixa
+				{
+					var inss =  621.04; //Cálculo do INSS
+				}
+
+				var irpf_inicial = salario - inss; //Cálculo pra descobrir o salário da pessoa com o INSS descontado
+		
+				if(irpf_inicial <= 1903.98) //Teste para ver em qual situação do IRPF o salário que o usuário digitou se encaixa
+				{
+					irpf_final = 0; //Cálculo IRPF
+					salario_final = irpf_inicial; //Cálculo Salário Líquido
+				}
+
+				if(irpf_inicial >=  1903.99 && irpf_inicial <= 2826.65) //Teste para ver em qual situação do IRPF o salário que o usuário digitou se encaixa
+				{
+					var irpf_final = ((7.5/100) * irpf_inicial) - 142.80; //Cálculo IRPF
+					var salario_final = irpf_inicial - irpf_final; //Cálculo Salário Líquido
+				}
+
+				if(irpf_inicial >= 2826.66  && irpf_inicial <= 3751.05) //Teste para ver em qual situação do IRPF o salário que o usuário digitou se encaixa
+				{
+					var irpf_final = ((15/100) * irpf_inicial) - 354.80; //Cálculo IRPF
+					var salario_final = irpf_inicial - irpf_final; //Cálculo Salário Líquido
+				}
+
+				if(irpf_inicial >= 3751.06 && irpf_inicial <= 4664.68) //Teste para ver em qual situação do IRPF o salário que o usuário digitou se encaixa
+				{
+					var irpf_final = ((22.5/100) * irpf_inicial) - 636.13; //Cálculo IRPF
+					var salario_final = irpf_inicial - irpf_final; //Cálculo Salário Líquido
+				}
+
+				if(irpf_inicial >= 4664.69) //Teste para ver em qual situação do IRPF o salário que o usuário digitou se encaixa
+				{
+					var irpf_final = ((27.5/100) * irpf_inicial) - 869.36; //Cálculo IRPF
+					var salario_final = irpf_inicial - irpf_final; //Cálculo Salário Líquido
+				}
+
+				document.getElementById("mostrar1").innerHTML = ""+nome+""; //Mostra o nome digitado pelo usuário na tabela
+				document.getElementById("mostrar2").innerHTML = "R$ "+salario+""; //Mostra o salário digitado pelo usuário na tabela
+				document.getElementById("mostrar3").innerHTML = "R$ "+salario_final.toFixed(2)+""; //Mostra o salário líquido
+				document.getElementById("mostrar4").innerHTML = "R$ "+inss.toFixed(2)+""; //Mostra o INSS obtido nos cálculos
+				document.getElementById("mostrar5").innerHTML = "R$ "+irpf_final.toFixed(2)+""; //Mostra o IRPF obtido nos cálculos
+			}
+
+			else // Else para caso o salário digitado for menor que 0 
+			{
+				document.getElementById("mostrar1").innerHTML = ""+nome+""; //Mostra o nome digitado pelo usuário na tabela
+				document.getElementById("mostrar2").innerHTML = "Salário invalido!"; //Mostra "Salário invalido!" caso o salário digitado seja negativo
+				document.getElementById("mostrar3").innerHTML = "Salário invalido!"; //Mostra "Salário invalido!" caso o salário digitado seja negativo
+				document.getElementById("mostrar4").innerHTML = "INSS invalido!"; //Mostra "INSS invalido!" caso o salário digitado seja negativo
+				document.getElementById("mostrar5").innerHTML = "IRPF invalido!"; //Mostra "IRPF invalido!" caso o salário digitado seja negativo
+			}		
+		};
+
+	</script>
+
+</html>

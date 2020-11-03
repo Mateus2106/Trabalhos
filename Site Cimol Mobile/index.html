@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<title>Cimol</title>
+		<link rel="stylesheet" href="./css/style.css"/>
+		<script>
+			var menu=function()
+			{
+				if(document.getElementById('menu').style.display=="block")
+				{
+					document.getElementById('menu').style.display="none";
+				}
+				else
+				{
+					document.getElementById('menu').style.display="block";
+				}
+			}	
+		</script>
+	</head>
+	<body>
+		<header>
+			<div id="logo"><img src="./images/logo.png"></div>
+			<div id="nome"><h2>Escola Técnica Estadual<br><span>Monteiro Lobato</span></h2></div>
+			<nav id="menu">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#noticias">Notícias</a></li>
+					<li><a href="#institucional">Institucional</a></li>
+					<li><a href="#estagio">Estágio</a></li>
+				</ul>
+			</nav>
+			<div id="icon_menu"><a href="" onclick="menu();return false"><img src="./images/menu.png"/></a></div>
+		</header>
+		<main>
+			<div id="info"><img src="./images/info.png"></div>
+			<div id="apresentação">
+				<p>Bem vindo! Este é o site da escola Monteiro Lobato, mais conhecida como Cimol,
+				aqui você encontrará várias informações sobre esta instituição</p>
+				<img src="./images/noticia.jpg">
+			</div>
+			<section id="home">
+			</section>
+		</main>
+	</body>
+</html>

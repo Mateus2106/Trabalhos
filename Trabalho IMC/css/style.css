@@ -1,0 +1,176 @@
+header{
+	border: 4px solid black;
+	background-color: #120A8F;
+	height: 15%;
+}
+
+header h2{
+	margin-left: 2%;
+	font-family: Arial;
+	font-size: 32px;
+	color: white;
+}
+
+#esquerda{
+	border: 2px solid black;
+	border-right: 0px;
+	border-top: 0px;
+	float: left;
+	width: 20.15%;
+	height: auto;
+	background-color: lightgray;
+}
+
+#esquerda p{
+	font-family: Arial;
+	font-size: 14px;
+	margin-left: 2%;
+	margin-right: 2%;
+	text-align: center;
+}
+
+#esquerda h2{
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 2%;
+	margin-right: 2%;
+	text-align: center;
+}
+
+main{
+	border: 2px solid black;
+	border-bottom: 0px;
+	border-top: 0px;
+	float: left;
+	width: 59.1%;
+	min-height: auto; 
+}
+
+main p{
+	font-weight: bold;
+	font-family: Arial;
+	margin-left: 1%;
+	margin-right: 1%;
+	text-align: center;
+}
+
+#direita{
+	border: 2px solid black;
+	border-left: 0px;
+	border-top: 0px;
+	float: left;
+	width: 20.15%;
+	min-height: auto;
+	background-color: lightgray;
+}
+
+#direita p{
+	font-family: Arial;
+	font-size: 14px;
+	margin-left: 2%;
+	margin-right: 2%;
+	text-align: center;
+}
+
+#direita h2{
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 2%;
+	margin-right: 2%;
+	text-align: center;
+}
+
+#divIMC h2{
+	margin-left: 4%;
+	font-family: Arial;
+	margin-bottom: 1%;
+	color: white;
+}
+
+#divIMC h3{
+	margin-left: 4%;
+	font-family: Arial;
+	font-size: 14px;
+	margin-top: 0px;
+	color: white;
+}
+
+#divIMC{
+	border: 2px solid black;
+	width: 60%;
+	height: auto;
+	margin-left: 20%;
+	margin-top: 2%;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 20px;
+	background-color: #120A8F;
+}
+
+#divForm{
+	width: 99.6%;
+	height: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border: 1px solid black;
+	background-color: white;
+	border-top: 2px solid black;
+}
+
+#divFonte{
+	width: 100%;
+	height: auto;
+	border-top: 1px solid black;
+}
+
+#divFonte p{
+	margin-left: 4%;
+	font-family: Arial;
+	font-size: 12px;
+	color: white;
+}
+
+form{
+	margin-left: 4%;
+	font-weight: bold;
+	font-family: Arial;
+	margin-top: 3%;
+}
+
+form input{
+	margin-bottom: 1%;
+}
+
+form span{
+	font-family: Arial;
+	font-size: 12px;
+}
+
+#tabela{
+	border: 2px solid black;
+	margin-left: 28%;
+}
+
+#tabelaL{
+	border: 2px solid black;
+	text-align: center;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+footer{
+	border: 4px solid black;
+	background-color: #120A8F;
+	float: left;
+	height: auto;
+	width: 99.7%;
+}
+
+footer p{
+	font-family: Arial;
+	font-size: 14px;
+	color:white;
+	text-align: center;
+}

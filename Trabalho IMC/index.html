@@ -1,0 +1,56 @@
+<html>
+
+	<head>
+		<title>Calculadora IMC</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+
+	<body>
+		<header>
+			<h2>Calculadora de IMC</h2>
+		</header>
+
+		<aside id="esquerda">
+			<h2>O IMC nem sempre está certo</h2>
+			<p>Infelizmente, a medida de IMC nem sempre representa a realidade. Por exemplo, o músculo é muito mais pesado que a gordura. Logo, um halterofilista terá um IMC muito alto, mas isso não se reflete em obesidade, já que a maior parte de sua massa corporal é formada por musculatura.</p>
+			<p>É importante levar em conta que a massa corporal é formada por água, gordura, músculos e ossos, e tudo isso precisa ser bem avaliado para medir a saúde de alguém corretamente. Por isso, é de extrema importância consultar um especialista para que ele possa fazer a análise do IMC junto com outros índices e medidas usados para entender a composição corporal.</p>
+		</aside>
+
+		<main>
+			<div id="divIMC">
+				<h2>Índice de massa corporal (IMC)</h2>
+				<h3>Uma medida da gordura corporal em adultos</h3>
+				
+				<div id="divForm">
+					<form action="calculo.php" method="post">
+			    		Peso: <br><input type="number" name="peso"> <span>kg</span><br>
+			    		Altura:<br><input type="number" name="altura"> <span>cm</span><br>
+			    		<input type="submit">
+			  		</form>
+			  	</div>
+
+		  		<div id="divFonte">
+		  			<p>Fonte: Ministério da Saúde</p>
+		  		</div>
+		  	</div>
+		  	<p>IMC é a sigla para Índice de Massa Corporal que serve para avaliar o peso do indivíduo em relação à sua altura e assim indicar se está dentro do peso ideal, acima ou abaixo do peso desejado.</p>
+			<p>Estar dentro do peso certo é importante porque estar acima ou abaixo peso influencia na saúde, aumentando o risco de doenças como desnutrição quando se está abaixo do peso, e AVC e infarto, quando se está acima do peso. Assim, é comum os médicos, enfermeiros e nutricionistas avaliarem o peso da pessoa nas consultas de rotina para verificar a possibilidade de doenças que a pessoa pode estar pre-disposta.</p>
+		</main>
+
+		<aside id="direita">
+			<h2>Outros tipos de medidas</h2>
+			<p>Existem alguns outros índices e medidas que podem ser usados, como:</p>
+			<p><b>Medidas antropométricas:</b> mede a circunferência e quantidade de gordura nos braços, pernas e tronco, em alguns pontos estratégicos.</p>
+			<p><b>Bioimpedância:</b> estima o percentual de água, massa muscular e massa gorda do organismo</p>
+			<p><b>Circunferência abdominal:</b> avalia a quantidade de gordura visceral do paciente, que é a mais perigosa.</p>
+			<p><b>Relação cintura-quadril:</b> Mostra onde está o acúmulo de gordura de cada pessoas.</p>
+		</aside>
+
+		<footer>
+			<p>Copyright @ Mateus Chaves Marques</p>
+		</footer>
+	</body>
+
+</html>

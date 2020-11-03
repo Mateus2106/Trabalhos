@@ -1,0 +1,21 @@
+body{
+	background-color:black;
+}
+
+div{
+	margin-left:590px;
+	height:200px;
+	width:200px;
+}
+
+#lampada{
+	margin-left:45px;
+	transform: rotatex(180deg);
+}
+
+#interruptor{
+	margin-top:300px;
+	margin-left:620px;
+	height:120px;
+	width:120px;
+}

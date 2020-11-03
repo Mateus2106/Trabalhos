@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title>Criação de Sites</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+	</head>
+	<body>
+		<header>
+			<h1>Formulário</h1>
+		</header>
+		<main>
+			<form>
+				<fieldset>
+					<legend><b>Dados Pessoais</b></legend>
+					<div>
+						<label><b>Nome Completo:</b></label>
+						<input type="text" name="Nome" 
+						pattern="[A-Z][a-záàãâéèêìíîõòôóüûùúç]+(( [A-z])? [A-Z][a-záàãâéèêìíîõòôóüûùúç]+)+" placeholder="Nome Completo" required/>
+					</div>
+					<div>
+						<label><b>Nome da Mãe:</b></label>
+						<input type="text" name="Nome-Mãe" 
+						pattern="[A-Z][a-záàãâéèêìíîõòôóüûùúç]+(( [A-z])? [A-Z][a-záàãâéèêìíîõòôóüûùúç]+)+" placeholder="Nome da Mãe"/>
+					</div>
+					<div>
+						<label><b>Nome do Pai:</b></label>
+						<input type="text" name="Nome-Pai" 
+						pattern="[A-Z][a-záàãâéèêìíîõòôóüûùúç]+(( [A-z])? [A-Z][a-záàãâéèêìíîõòôóüûùúç]+)+" placeholder="Nome do Pai"/>
+					</div>
+					<div>
+						<label><b>Data de Nascimento:</b></label>
+						<input type="date" name="Data-nascimento" required/>
+					</div>
+					<div>
+						<label><b>CPF:</b></label>
+						<input type="text" name="CPF" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" placeholder="000.000.000-00" required/>
+					</div>
+					<div>
+						<label><b>Sexo:</b></label>
+						<input type="radio" name="Sexo" value="Masculino" checked><b>Masculino</b>
+						<input type="radio" name="Sexo" value="Feminino"><b>Feminino</b>
+						<input type="radio" name="Sexo" value="Outro"><b>Outro</b>
+					</div>
+					<div>
+						<label><b>Estado Civil:</b></label>
+						<input type="radio" name="Estado-Civil" value="Solteiro(a)" checked><b>Solteiro(a)</b>
+						<input type="radio" name="Estado-Civil" value="Casado(a)" checked><b>Casado(a)</b>
+						<input type="radio" name="Estado-Civil" value="Divorciado(a)" checked><b>Divorciado(a)</b>
+						<input type="radio" name="Estado-Civil" value="Separado(a)" checked><b>Separado(a)</b>
+						<input type="radio" name="Estado-Civil" value="Viúvo(a)" checked><b>Viúvo(a)</b>
+					</div>
+					<div>
+						<label><b>Estado Atual:</b></label>
+						<input type="radio" name="Estado-Atual" value="Estudante(a)" checked><b>Estudante(a)</b>
+						<input type="radio" name="Estado-Atual" value="Empregado(a)" checked><b>Empregado(a)</b>
+						<input type="radio" name="Estado-Atual" value="Desempregado(a)" checked><b>Desempregado(a)</b>
+						<input type="radio" name="Estado-Atual" value="Estagiário(a)" checked><b>Estagiário(a)</b>
+						<input type="radio" name="Estado-Atual" value="Aposentado(a)" checked><b>Aposentado(a)</b>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend><b>Endereço</b></legend>
+					<div>
+						<label><b>Cidade:</b></label>
+						<input type="text" name="Cidade" placeholder="Cidade" 
+						pattern="([A-Z][a-záàãâéèêìíîõòôóüûùúç]+)+" required/>
+					</div>
+					<div>
+						<label><b>CEP:</b></label>
+						<input type="text" name="CEP" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000" required/>
+					</div>
+					<div>
+						<label><b>Rua:</b></label>
+						<input type="text" name="Rua" placeholder="Nome da rua" 
+						pattern="[A-Z][a-záàãâéèêìíîõòôóüûùúç]+(( [A-z])? [A-Z][a-záàãâéèêìíîõòôóüûùúç]+)+" required/>
+					</div>	
+					<div>
+						<label><b>Bairro:</b></label>
+						<input type="text" name="Bairro" placeholder="Nome do bairro" 
+						pattern="[A-Z][a-záàãâéèêìíîõòôóüûùúç]+(( [A-z])? [A-Z][a-záàãâéèêìíîõòôóüûùúç]+)+" required/>
+					</div>
+					<div>
+						<label><b>Número:</b></label>
+						<input type="text" name="Numero" placeholder="Número da casa" pattern="[0-9]+" required/>
+					</div>
+					<div>
+						<label><b>Complemento:</b></label>
+						<input type="text" name="Complemento" placeholder="Casa-Condomínio" 
+						pattern="[A-záàãâéèêìíîõòôóüûùúç0-9]+-[A-záàãâéèêìíîõòôóüûùúç0-9]+"/>
+					</div>
+					<div>
+						<label><b>UF:</b></label>
+						<input type="text" name="UF" placeholder="Unidade Federativa" pattern="[A-Z]{2}" required/>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend><b>Contatos</b></legend>
+					<div>
+						<label><b>E-mail:</b></label>
+						<input type="email" name="Email" placeholder="endereço@provedor.com" pattern="[A-z0-9.-_]+@[A-z0-9]+.com" required/>
+					</div>
+					<div>
+						<label><b>Número de Celular:</b></label>
+						<input type="text" name="Celular" placeholder="00 00 00000-0000" 
+						pattern="[0-9]{2} [0-9]{2} [0-9]{5}-[0-9]{4}" required/>
+					</div>
+				</fieldset>
+				<input id="botao" type="submit" name="salvar" value="Salvar"/>
+			</form>
+		</main>
+		<footer><b>Copyright © mateuschavesmarques.com.br</b></footer>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<title>Javascript</title>
+		<link rel="stylesheet" href="./css/style.css"/>	
+	</head>
+	<body id=luz>
+		<div>
+			<img id="lampada" src="lampada-on.gif" alt="lampada"/>
+		</div>
+		<img id="interruptor" src="interruptor-on.png" alt="interruptor"/>
+		<script>
+			var interruptor = document.getElementById('interruptor');
+				interruptor.onclick = function() {
+					 if (interruptor.src.match("-on")) {
+						  interruptor.src="interruptor-off.png";
+						  lampada.src="lampada-off.gif";
+						  document.getElementById("luz").style.background="black";
+					 } else {
+						  interruptor.src="interruptor-on.png";
+						  lampada.src="lampada-on.gif";
+						  document.getElementById("luz").style.background="white";
+					 }
+				};
+		</script>
+	</body>
+</html>
